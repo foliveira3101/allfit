@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose'
-import { ExerciceSchema } from './exercice.model'
+import { TrainingItemSchema} from './training.item.model'
 
 
 const Schema = mongoose.Schema
@@ -9,8 +9,17 @@ export const TrainingSchema = new Schema({
         type: String,
         required: 'Enter training name'
     },
-    exercices:{
-        type: [ExerciceSchema]
+    description:{
+        type: String
+    },
+    startAt:{
+        type: Date,
+    },
+    endAt:{
+        type: Date,
+    },
+    items:{
+        type: [TrainingItemSchema]
     },
     createdAt: {
         type: Date,
