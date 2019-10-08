@@ -8,5 +8,7 @@
         public string WhatsApp { get; set; }
         public byte[] Photo { get; set; }
         public bool IsActive { get; set; }
+        public Target Target { get; set; }
+
     }
 }
