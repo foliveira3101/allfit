@@ -1,0 +1,40 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6001
+        }
+      ],
+      "UpstreamPathTemplate": "/customers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "ReRouteIsCaseSensitive": false,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AzureADJwtBearer",
+        "AllowedScopes": []
+      }
+    }
+    //,
+    //{
+    //  "DownstreamPathTemplate": "/api/values",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 44355
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/locations",
+    //  "UpstreamHttpMethod": [ "Get" ],
+    //  "ReRouteIsCaseSensitive": false,
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "AzureADJwtBearer",
+    //    "AllowedScopes": []
+    //  }
+    //}
+  ],
+  "GlobalConfiguration": {}
+}
