@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace allfit_customers_api
+namespace allfit_members_api
 {
     public class Startup
     {
@@ -40,7 +40,7 @@ namespace allfit_customers_api
                 x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                 {
                     ValidAudiences = new[] {
-                            Configuration["AzureAdB2C:allfit-customers-api"],
+                            Configuration["AzureAdB2C:allfit-members-api"],
                             Configuration["AzureAdB2C:allfit-mobile-gateway"]
                         }
                 };

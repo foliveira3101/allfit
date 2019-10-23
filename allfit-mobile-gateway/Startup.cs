@@ -40,7 +40,7 @@ namespace allfit_mobile_gateway
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] {
-                            Configuration["AzureAdB2C:allfit-customers-api"],                            
+                            Configuration["AzureAdB2C:allfit-members-api"],                            
                             Configuration["AzureAdB2C:allfit-mobile-gateway"]
                         }
                     };

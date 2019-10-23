@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
-namespace allfit_customers_api.Controllers
+namespace allfit_members_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,7 +14,7 @@ namespace allfit_customers_api.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "customer 1", "customer 2" };
+            return new string[] { "member 1", "member 2" };
         }
 
         // GET api/values/5

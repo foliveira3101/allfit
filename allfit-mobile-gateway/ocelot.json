@@ -9,7 +9,7 @@
           "Port": 6001
         }
       ],
-      "UpstreamPathTemplate": "/customers",
+      "UpstreamPathTemplate": "/members",
       "UpstreamHttpMethod": [ "Get" ],
       "ReRouteIsCaseSensitive": false,
       "AuthenticationOptions": {

@@ -11,13 +11,12 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "allfit_customers_api": {
+    "allfit_members_api": {
       "commandName": "Project",
       "launchUrl": "api/values",
       "environmentVariables": {

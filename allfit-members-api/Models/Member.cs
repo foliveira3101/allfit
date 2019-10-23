@@ -1,4 +1,4 @@
-﻿namespace allfit_customers_api.Models
+﻿namespace allfit_members_api.Models
 {
     public class Member
     {
@@ -7,8 +7,7 @@
         public string Email { get; set; }
         public string WhatsApp { get; set; }
         public byte[] Photo { get; set; }
-        public bool IsActive { get; set; }
-        public Target Target { get; set; }
+        public bool IsActive { get; set; }        
 
     }
 }

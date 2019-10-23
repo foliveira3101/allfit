@@ -3,9 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>allfit_customers_api</RootNamespace>
+    <RootNamespace>allfit_members_api</RootNamespace>
     <UserSecretsId>cc516eeb-aa88-4fa5-83c9-b50ce0b3fe32</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <AssemblyName>allfit-members-api</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
