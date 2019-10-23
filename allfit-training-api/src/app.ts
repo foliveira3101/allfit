@@ -18,10 +18,7 @@ class App {
         this.app = express()
         this.port = port
         this.config()              
-        this.initializeRoutes(routes)                
-
-        this.database = new db()
-        this.database.createConnection()
+        this.initializeRoutes(routes)                        
     }
    
     private config(): void{
@@ -38,7 +35,11 @@ class App {
         })
 
         //passport
-        this.app.use(passport.initialize())        
+        this.app.use(passport.initialize())     
+        
+        //database - mongodb
+        this.database = new db()
+        this.database.createConnection()
     }
 
     private initializeRoutes(routes) : void {
