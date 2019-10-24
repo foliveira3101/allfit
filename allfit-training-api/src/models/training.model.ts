@@ -1,10 +1,17 @@
 import * as mongoose from 'mongoose'
-import { TrainingItemSchema} from './training.item.model'
+import { TrainingItem} from './training.item.model'
 
 
-const Schema = mongoose.Schema
+export interface Training extends mongoose.Document {
+    name: string,
+    description: string,
+    startAt: Date,
+    endAt: Date,
+    items: mongoose.Types.ObjectId | TrainingItem,
+    createdAt: Date
+}
 
-export const TrainingSchema = new Schema({
+const trainingSchema = new  mongoose.Schema({
     name: {
         type: String,
         required: 'Enter training name'
@@ -19,10 +26,14 @@ export const TrainingSchema = new Schema({
         type: Date,
     },
     items:{
-        type: [TrainingItemSchema]
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'TrainingItem',
+        required: true  
     },
     createdAt: {
         type: Date,
         default: Date.now
     }
 })
+
+export const Training = mongoose.model<Training>('TrainingItem', trainingSchema)

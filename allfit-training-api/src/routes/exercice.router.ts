@@ -15,13 +15,14 @@ export class ExerciceRoutes {
     }
 
     public intializeRoutes() {
-        this.router.get(this.path, 
-            passport.authenticate('oauth-bearer', {session: false}),this.controller.getAll)
-            
-        this.router.get(this.path + '/:id', this.controller.getById)
+        // this.router.get(this.path, 
+        //     passport.authenticate('oauth-bearer', {session: false}),this.controller.getAll)
+        
+        this.router.get(this.path , this.controller.getAll)
+        this.router.get(this.path + '/:id', this.controller.getById)        
         this.router.post(this.path, this.controller.add)
-        this.router.put(this.path + '/:id', this.controller.update)
-        this.router.delete(this.path + '/:id', this.controller.delete)
+        // this.router.put(this.path + '/:id', this.controller.update)
+        // this.router.delete(this.path + '/:id', this.controller.delete)
     }
 
 }

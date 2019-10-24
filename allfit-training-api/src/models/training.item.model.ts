@@ -1,11 +1,20 @@
 import * as mongoose from 'mongoose'
-import { ExerciceSchema } from './exercice.model'
+import { Exercice } from './exercice.model'
 
-const Schema = mongoose.Schema
 
-export const TrainingItemSchema = new Schema({
+export interface TrainingItem extends mongoose.Document {
+    exercice: mongoose.Types.ObjectId | Exercice,
+    series: number,
+    repeats: number,
+    recoveryTime: number,
+    createdAt: Date
+}
+
+const trainingItemSchema = new mongoose.Schema({
     exercice: {
-        type: ExerciceSchema,        
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Exercice',
+        required: true    
     },
     series:{
         type: Number
@@ -21,3 +30,6 @@ export const TrainingItemSchema = new Schema({
         default: Date.now
     }
 })
+
+export const TrainingItem = mongoose.model<TrainingItem>('TrainingItem', trainingItemSchema)
+

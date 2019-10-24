@@ -1,8 +1,11 @@
 import * as mongoose from 'mongoose'
 
-const Schema = mongoose.Schema
+export interface Group extends mongoose.Document {
+    name: string,
+    createdAt: Date
+}
 
-export const GroupSchema = new Schema({
+const groupSchema = new mongoose.Schema({
     name: {
         type: String,
         required: 'Enter group name'
@@ -12,3 +15,5 @@ export const GroupSchema = new Schema({
         default: Date.now
     }
 })
+
+export const Group = mongoose.model<Group>('Group', groupSchema)

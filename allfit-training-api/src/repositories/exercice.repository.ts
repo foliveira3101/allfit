@@ -1,4 +1,6 @@
-import * as mongoose from 'mongoose'
-import { ExerciceSchema } from '../models/exercice.model'
+import { BaseRepository } from './base.repository'
+import { Exercice } from '../models/exercice.model'
 
-export const ExerciceRepository = mongoose.model('Exercice', ExerciceSchema)
+export class ExerciceRepository extends BaseRepository<Exercice> {
+
+}
